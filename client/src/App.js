@@ -11,12 +11,14 @@ class App extends Component {
     return (
       <Fragment>
         <Navbar />
+        <main className="container">
         <Switch>
           <Route path="/expenses" component={Expenses} />
           <Route path="/income" component={Income} />
           <Route path="/login" component={LoginForm} />
           <Redirect from="/" to="/login" />
         </Switch>
+        </main>
       </Fragment>
     );
   }
